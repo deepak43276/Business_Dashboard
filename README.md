@@ -141,23 +141,56 @@ npm start
 
 ---
 
-
-
 ## 📦 Deployment
 
-### Frontend Deployment (Vercel/Netlify)
-1. Build the project:
-   ```bash
-   cd frontend
-   npx tailwindcss -i ./src/input.css -o ./src/output.css
-   npm run build
-   ```
-2. Deploy the `build` folder
+### Backend Deployment (Render)
 
-### Backend Deployment (Render/Glitch)
-1. Set environment variables if needed
-2. Deploy the `backend` folder
-3. Update frontend API URLs to production
+1. **Go to [Render.com](https://render.com)** and create an account
+2. **Click "New +" → "Web Service"**
+3. **Connect your GitHub repository**
+4. **Configure the service:**
+   - **Name:** `growthpro-ai-backend`
+   - **Environment:** `Node`
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
+   - **Root Directory:** `backend`
+5. **Click "Create Web Service"**
+6. **Copy the deployment URL** (e.g., `https://your-app-name.onrender.com`)
+
+### Frontend Deployment (Vercel)
+
+1. **Go to [Vercel.com](https://vercel.com)** and create an account
+2. **Click "New Project"**
+3. **Import your GitHub repository**
+4. **Configure the project:**
+   - **Framework Preset:** `Create React App`
+   - **Root Directory:** `frontend`
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `build`
+5. **Add Environment Variable:**
+   - **Name:** `REACT_APP_API_URL`
+   - **Value:** `https://your-backend-url.onrender.com` (from Render)
+6. **Click "Deploy"**
+
+### Environment Variables
+
+**For Vercel (Frontend):**
+- `REACT_APP_API_URL`: Your Render backend URL
+
+**For Render (Backend):**
+- No environment variables required (uses simulated data)
+
+### Deployment URLs
+
+After deployment, you'll have:
+- **Frontend:** `https://your-app-name.vercel.app`
+- **Backend:** `https://your-app-name.onrender.com`
+
+### Testing Deployment
+
+1. **Test Backend:** Visit your Render URL + `/business-data` (should show CORS error, which is normal)
+2. **Test Frontend:** Visit your Vercel URL and try the application
+3. **Check Console:** Ensure no CORS errors in browser console
 
 ---
 
