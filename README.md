@@ -1,5 +1,9 @@
 # Mini Local Business Dashboard
 
+## 🚀 Live Demo
+- **Frontend:** [https://businessdashboard-phi.vercel.app/](https://businessdashboard-phi.vercel.app/)
+- **Backend:** [https://business-dashboard-o5yl.onrender.com](https://business-dashboard-o5yl.onrender.com)
+
 ##  Objective
 Build a Mini Local Business Dashboard that simulates how small businesses might view their SEO content and Google Business data.
 
@@ -169,7 +173,7 @@ npm start
    - **Output Directory:** `build`
 5. **Add Environment Variable:**
    - **Name:** `REACT_APP_API_URL`
-   - **Value:** `https://your-backend-url.onrender.com` (from Render)
+   - **Value:** `https://your-app-name.onrender.com` (replace with your actual Render URL)
 6. **Click "Deploy"**
 
 ### Environment Variables
@@ -183,8 +187,8 @@ npm start
 ### Deployment URLs
 
 After deployment, you'll have:
-- **Frontend:** `https://your-app-name.vercel.app`
-- **Backend:** `https://your-app-name.onrender.com`
+- **Frontend:** `https://businessdashboard-phi.vercel.app/`
+- **Backend:** `https://business-dashboard-o5yl.onrender.com`
 
 ### Testing Deployment
 

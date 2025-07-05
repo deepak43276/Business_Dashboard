@@ -33,6 +33,20 @@ const BusinessDashboard = () => {
 
   if (!businessData) return null;
 
+  // Show loading spinner for the entire dashboard when loading
+  if (loading) {
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+          Business Dashboard
+        </h2>
+        <div className="flex items-center justify-center py-12">
+          <LoadingSpinner text="Loading business data..." />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">
@@ -70,18 +84,12 @@ const BusinessDashboard = () => {
           <p className="text-gray-800 italic">"{businessData.headline}"</p>
         </div>
         
-        {loading ? (
-          <div className="flex items-center justify-center py-4">
-            <LoadingSpinner text="Regenerating headline..." />
-          </div>
-        ) : (
-          <button
-            onClick={handleRegenerateHeadline}
-            className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors"
-          >
-            Regenerate SEO Headline
-          </button>
-        )}
+        <button
+          onClick={handleRegenerateHeadline}
+          className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors"
+        >
+          Regenerate SEO Headline
+        </button>
       </div>
     </div>
   );
