@@ -1,4 +1,4 @@
-# GrowthProAI – Full Stack Intern Assignment
+# Mini Local Business Dashboard
 
 ##  Objective
 Build a Mini Local Business Dashboard that simulates how small businesses might view their SEO content and Google Business data.
